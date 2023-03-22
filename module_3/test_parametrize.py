@@ -2,7 +2,7 @@ import pytest
 from selenium.webdriver.common.by import By
 
 
-@pytest.mark.parametrize('language', ["ru", "en-gb"])
+@pytest.mark.parametrize('language', ["ru", "en-gb"])  # может использоваться и для класса
 def test_guest_should_see_login_link(browser, language):
     link = f"http://selenium1py.pythonanywhere.com/{language}/"
     browser.get(link)
